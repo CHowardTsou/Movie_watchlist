@@ -9,12 +9,7 @@ document.getElementById('btn-search').addEventListener('click', function(){
     fetch(`https://www.omdbapi.com/?s=${searchText}&apikey=1ba2fe6e&type=movie`)
     .then(res => res.json())
     .then(data => {
-        // console.log(data.Search)
-        
         render(data.Search)
-        // fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=1ba2fe6e`)
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
         
     })
 })
@@ -27,7 +22,6 @@ function render(searchArr){
         fetch(`https://www.omdbapi.com/?i=${search.imdbID}&apikey=1ba2fe6e`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 searchArray.push(data)
                 displayResult.innerHTML += `
                 <div class="result">
@@ -41,12 +35,9 @@ function render(searchArr){
                             <p>${data.Runtime}</p>
                             <p>${data.Genre}</p>
                             <div class="watchlist">
-                                <span 
-                                    class="material-symbols-outlined" 
-                                    data-imdbid=${data.imdbID}>
-                                    add_circle
-                                </span>
-                                <p>Watchlist</p>
+                                <p>
+                                <i class="fa-solid fa-circle-plus" data-imdbid=${data.imdbID}></i>
+                                Watchlist</p>
                             </div>
                         </div>
                         <p class="plot">
@@ -65,9 +56,6 @@ function render(searchArr){
 document.addEventListener("click", function(e){
     if(e.target.dataset.imdbid){
         watchlist.push(searchArray.filter(item => item.imdbID === e.target.dataset.imdbid)[0])
-        console.log(watchlist)
         localStorage.setItem("watchlist", JSON.stringify(watchlist))
-        console.log(e.target.dataset.imdbid)
-        
     }
 })
