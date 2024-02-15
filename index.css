@@ -1,0 +1,151 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: block;
+    text-align: center;
+    max-width: 34.375rem;
+    margin: 0 auto;
+    position: relative;;
+}
+
+header {
+    
+    background-color: black;
+    background-image: url("img/THJJRUhNlEc.png");
+    color: white;
+    height: 13rem;
+    
+    
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.6em;
+    
+}
+h1 {
+    font-size: 2.625rem;
+}
+
+h2 {
+    font-size: 0.875rem;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: #FFFFFF;
+}
+.search-bar {
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    width: 28.875rem;
+    margin: 0 auto;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 2.75rem;
+    top: 11.875rem;
+}
+
+.search-bar input {
+    border: none;
+    width: 18rem;
+}
+
+.search-bar button {
+    width: 7.5rem;
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    cursor: pointer;
+}
+
+.search-bar i {
+    width: 2rem;
+    padding: 0.5em;
+}
+
+.display-result {
+    display: block;
+    
+}
+.result {
+    display: flex;
+    width: 28.875rem;
+    margin: 40px auto;
+    gap: 1em;
+    
+}
+.name-score {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.min-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+    width: max-content;
+    line-height: 0.1em;
+    
+}
+
+.min-type {
+    font-size: 0.75em;
+}
+
+.plot {
+    font-size: 0.875em;
+    text-align: start;
+    
+}
+
+.result img {
+    height: 9.2rem;
+    width: 6.25rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    
+}
+
+.watchlist{
+    display: flex;
+}
+
+.emptylist {
+    padding: 8rem;
+}
+
+.empty {
+    color: #DFDDDD;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.gray{
+    color: #DFDDDD;
+}
+.empty-two {
+    color: #363636;
+    line-height: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+}
